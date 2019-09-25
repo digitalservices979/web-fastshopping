@@ -4,4 +4,3 @@ django-ckeditor==5.7.1
 django-carton==1.2.1
 django-paypal==1.0.0
 python-slugify==3.0.3
-text-unicode==1.2
