@@ -1,0 +1,150 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}
+    Productos
+{% endblock title %}
+    <!--================Home Banner Area =================-->
+{% block content %}  
+    <!--================Category Product Area =================-->
+    <section class="cat_product_area section_gap">
+      <div class="container">
+        <div class="row flex-row-reverse">
+          <div class="col-md-9">
+            <div class="d-block d-md-none col-12" style="background-color: rgba(0, 0, 0, 0);">
+              <div class="row">
+                <div class="col-6">
+                  <span class="d-block">Categorías</span>
+                  <select class="form-control">
+                    <option>Todo</option>   
+                  {% for cat in categoria %}
+                    <option>{{cat.name_category}}</option>
+                  {% endfor %}
+                  </select>
+                </div>
+                <div class="col-6">
+                  <span class="d-block">Marca</span>
+                  <select class="form-control">
+                    <option>Todo</option>
+                    {% for marc in marca %}
+                    <option>{{marc.name_brand}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="latest_product_inner">
+              <div class="row">
+                {% for producto in object_list %}
+                 
+                  <div class="col-sm-4 col-6 filter {{producto.category_product|lower}}">
+                    <div class="single-product">
+                      <div class="product-img">
+                        <a href="{% url 'product_detail' producto.name_product|slugify producto.id%}"><img
+                          class="card-img"
+                          src="{{producto.image_product1.url}}"
+                          alt=""
+                        /></a>
+                      </div>
+                      <div class="product-btm">
+                        <a href="#" class="d-block">
+                          <h4>{{producto.name_product}}</h4>
+                        </a>
+                        <div class="mt-3">
+                          <span class="mr-4">${{producto.price}}</span>
+                          <del>$35.00</del>
+                        </div>
+                      </div>
+                    </div>
+                  </div>               
+                {% endfor %}
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  {% if page_obj.has_previous %}
+                    <li class="page-item">            
+                      <a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>    
+                    </li>
+                {% else %}
+                  <li class="page-item disabled">           
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>     
+                    </li>
+                  {% endif %}
+                  {% if page_obj.has_next %}
+                    <li class="page-item">
+                      <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+                    </li>
+                  {% else %}
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="d-none d-md-block col-md-3">
+            <div class="left_sidebar_area">
+              <aside class="left_widgets p_filter_widgets">
+                <div class="l_w_title">
+                  <h3>Categorías</h3>
+                </div>
+                <div class="widgets_inner">
+                    {% for cat in categoria %}
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{cat.name_category}}" id="d{{cat.name_category}}" name="categoria" form="formulario">
+                        <label class="form-check-label" for="d{{cat.name_category}}">
+                          {{cat.name_category}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+              </aside>
+
+              <aside class="left_widgets p_filter_widgets">
+                <div class="l_w_title">
+                  <h3>Marca</h3>
+                </div>
+                <div class="widgets_inner">
+                  {% for marc in marca %}
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="{{marc.name_brand}}" id="d{{marc.name_brand}}" name="marca" form="formulario">
+                      <label class="form-check-label" for="d{{marc.name_brand}}">
+                        {{marc.name_brand}}
+                      </label>
+                    </div>
+                  {% endfor %}
+                </div>
+              </aside>
+
+              <aside class="left_widgets p_filter_widgets">
+                <div class="l_w_title">
+                  <h3>Color</h3>
+                </div>
+                <div class="widgets_inner">
+                   {% for col in color %}
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{col.name_color}}" id="d{{col.name_color}}" name="color" form="formulario">
+                        <label class="form-check-label" for="d{{col.name_color}}">
+                          {{col.name_color}}
+                        </label>
+                      </div>
+                    {% endfor %} 
+                </div>
+              </aside>
+              <aside class="left_widgets p_filter_widgets">
+                <form action="{% url 'product_list' %}" id="formulario">
+                  <button class="btn btn-success w-100" type="submit">Filtrar</button>
+                </form>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Category Product Area =================-->
+{% endblock %}
+    <!--================ End footer Area  =================-->

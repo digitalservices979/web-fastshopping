@@ -1,0 +1,232 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load replace_filter %}
+{% block title %}
+    Facturación
+{% endblock title %}
+{% block content %}
+    
+
+  {{form.render}}
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+          <div
+            class="banner_content d-md-flex justify-content-between align-items-center"
+          >
+            <div class="mb-3 mb-md-0">
+              <h2>Product Checkout</h2>
+              <p>Very us move be blessed multiply night</p>
+            </div>
+            <div class="page_link">
+              <a href="index.html">Home</a>
+              <a href="checkout.html">Product Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Checkout Area =================-->
+    <section class="checkout_area section_gap">
+      <div class="container">
+        <div class="cupon_area">
+          <div class="check_title">
+            <h2>
+              ¿Tienes un cupón?
+              
+            </h2>
+          </div>
+          <input type="text" placeholder="Enter coupon code" />
+          <a class="tp_btn" href="#">Aplicar cupón</a>
+        </div>
+        <div class="billing_details">
+          <div class="row">
+            <div class="col-md-8">
+              <h3>Detalles de facturación</h3>
+              <form
+                class="row contact_form"
+                action="#"
+                method="post"
+                novalidate="novalidate"
+              >
+                <div class="col-md-6 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first"
+                    name="name"
+                  />
+                  <span
+                    class="placeholder"
+                    data-placeholder="Nombre"
+                  ></span>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last"
+                    name="name"
+                  />
+                  <span class="placeholder" data-placeholder="Apellido"></span>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="number"
+                    name="number"
+                  />
+                  <span
+                    class="placeholder"
+                    data-placeholder="Número de celular"
+                  ></span>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="compemailany"
+                  />
+                  <span
+                    class="placeholder"
+                    data-placeholder="Correo de contacto"
+                  ></span>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <select class="country_select">
+                    <option value="1">Lima</option>
+                    <option value="2">Callao</option>
+                  </select>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <select class="country_select">
+                    <option value="1">Distrito</option>
+                    <option value="2">Distrito2</option>
+                    <option value="4">Distrito3</option>
+                  </select>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="add1"
+                    name="add1"
+                  />
+                  <span
+                    class="placeholder"
+                    data-placeholder="Dirección"
+                  ></span>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="add2"
+                    name="add2"
+                  />
+                  <span
+                    class="placeholder"
+                    data-placeholder="Referencia"
+                  ></span>
+                </div>
+                <div class="col-md-12 form-group">
+                  <div class="creat_account">
+                    <h3>Sugerencias de entrega</h3>
+                    <label for="f-option3">¿Algún comentario sobre el envío?</label>
+                  </div>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    rows="1"
+                    placeholder="Comentarios"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <div class="order_box">
+                <h2>Tu pedido</h2>
+                <ul class="list">
+                  {% for productos in producto %}      
+                    <li class="col-12">
+                        <span class="text-right col-6">{{productos.quantity}}</span>
+                        <span class="text-left col-6">
+                        {{productos.product.name_product}}
+                        </span>
+                        
+                    </li>
+                  {% endfor %}
+                </ul>
+                <hr>
+                <ul class="list list_2">
+                  <li>
+                    <a href="#"
+                      >Subtotal
+                      <span>${{total|replace}}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Envío
+                      <span>Tarifa fija: $5.00</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Total
+                      <span>${{total|checkout:5}}</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="payment_item">
+                  <div class="radion_btn">
+                    <input type="radio" id="f-option6" name="selector" checked="checked" />
+                    <label for="f-option6">Paypal </label>
+                    <img src="{% static 'img/product/single-product/card.jpg' %}" alt="" />
+                    <div class="check"></div>
+                  </div>
+                  <p class="text-primary">
+                    Please send a check to Store Name, Store Street, Store Town,
+                    Store State / County, Store Postcode.
+                  </p>
+                </div>
+                <div class="creat_account">
+                  <input type="checkbox" id="f-option4" name="selector" />
+                  <label for="f-option4">He leído y acepto los </label>
+
+                  <a href="#" class="text-primary" data-toggle="modal" data-target="#exampleModalCenter">términos y condiciones*</a>
+                </div>
+                <a class="main_btn" href="#">Pagar con paypal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Checkout Area =================-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Términos y condiciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Ésta es una página de prueba con derechos reservados 
+      </div>
+    </div>
+  </div>
+</div>
+<img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now" />
+{% endblock content %}

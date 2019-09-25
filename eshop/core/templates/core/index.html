@@ -1,0 +1,663 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}
+     Inicio
+{% endblock title %}
+  <!--================Home Banner Area =================-->
+{% block content %}
+  <section class="home_banner_area mb-40">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="banner_content row">
+          <div class="col-lg-12">
+            <p class="sub text-uppercase">Colección para hombres</p>
+            <h3><span>Muestra</span> tu <br />Estilo <span>Único</span></h3>
+            <h4 style="color: #000">Todo lo que necesitas en un solo lugar.</h4>
+            <a class="main_btn mt-40" href="#">Ver Colección</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================End Home Banner Area =================-->
+
+  <!-- Start feature Area -->
+  <section class="feature-area section_gap_bottom_custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="single-feature">
+            <a href="#" class="title">
+              <i class="flaticon-money"></i>
+              <h3>Garantía de reembolso</h3>
+            </a>
+            <p>Shall open divide a one</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-feature">
+            <a href="#" class="title">
+              <i class="flaticon-truck"></i>
+              <h3>Delivery Gratis</h3>
+            </a>
+            <p>Shall open divide a one</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-feature">
+            <a href="#" class="title">
+              <i class="flaticon-support"></i>
+              <h3>Atención al cliente</h3>
+            </a>
+            <p>Shall open divide a one</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-feature">
+            <a href="#" class="title">
+              <i class="flaticon-blockchain"></i>
+              <h3>Seguridad en los pagos</h3>
+            </a>
+            <p>Shall open divide a one</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End feature Area -->
+
+  <!--================ Feature Product Area =================-->
+  <section class="feature_product_area section_gap_bottom_custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Productos Destacados</span></h2>
+            <p>Nuevos en nuestra lista de catálogo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/feature-product/f-p-1.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Sneaker para hombres</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/feature-product/f-p-2.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Cartera roja</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/feature-product/f-p-3.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Smart Watch</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ End Feature Product Area =================-->
+
+  <!--================ Offer Area =================-->
+  <section class="offer_area">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="offset-lg-4 col-lg-6 text-center">
+          <div class="offer_content">
+            <h3 class="text-uppercase mb-40">Toda la colección de hombres</h3>
+            <h2 class="text-uppercase">50% off</h2>
+            <a href="#" class="main_btn mb-20 mt-5">Descubrir ahora</a>
+            <p>Offerta de tiempo limitado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ End Offer Area =================-->
+
+  <!--================ New Product Area =================-->
+  <section class="new_product_area section_gap_top section_gap_bottom_custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Productos nuevos</span></h2>
+            <p>Productos recién llegados</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="new_product">
+            <h5 class="text-uppercase">Collección de 2019</h5>
+            <h3 class="text-uppercase">Camisetas de verano</h3>
+            <div class="product-img">
+              <img class="img-fluid" src="{% static 'img/product/new-product/new-product1.png' %}" alt="" />
+            </div>
+            <h4>$120.70</h4>
+            <a href="#" class="main_btn">Añadir</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="single-product">
+                <div class="product-img">
+                  <img class="img-fluid w-100" src="{% static 'img/product/new-product/n1.jpg' %}" alt="" />
+                  <div class="p_icon">
+                    <a href="#">
+                      <i class="ti-eye"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-heart"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-btm">
+                  <a href="#" class="d-block">
+                    <h4>Sneakers Nike</h4>
+                  </a>
+                  <div class="mt-3">
+                    <span class="mr-4">$25.00</span>
+                    <del>$35.00</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="single-product">
+                <div class="product-img">
+                  <img class="img-fluid w-100" src="{% static 'img/product/new-product/n2.jpg' %}" alt="" />
+                  <div class="p_icon">
+                    <a href="#">
+                      <i class="ti-eye"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-heart"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-btm">
+                  <a href="#" class="d-block">
+                    <h4>Denim Men`s</h4>
+                  </a>
+                  <div class="mt-3">
+                    <span class="mr-4">$25.00</span>
+                    <del>$35.00</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="single-product">
+                <div class="product-img">
+                  <img class="img-fluid w-100" src="{% static 'img/product/new-product/n3.jpg' %}" alt="" />
+                  <div class="p_icon">
+                    <a href="#">
+                      <i class="ti-eye"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-heart"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-btm">
+                  <a href="#" class="d-block">
+                    <h4>Jeans azules</h4>
+                  </a>
+                  <div class="mt-3">
+                    <span class="mr-4">$25.00</span>
+                    <del>$35.00</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="single-product">
+                <div class="product-img">
+                  <img class="img-fluid w-100" src="{% static 'img/product/new-product/n4.jpg' %}" alt="" />
+                  <div class="p_icon">
+                    <a href="#">
+                      <i class="ti-eye"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-heart"></i>
+                    </a>
+                    <a href="#">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-btm">
+                  <a href="#" class="d-block">
+                    <h4>Adidas sport</h4>
+                  </a>
+                  <div class="mt-3">
+                    <span class="mr-4">$25.00</span>
+                    <del>$35.00</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ End New Product Area =================-->
+
+  <!--================ Inspired Product Area =================-->
+  <section class="inspired_product_area section_gap_bottom_custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Productos Alternos</span></h2>
+            <p>Bring called seed first of third give itself now ment</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i1.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Cartera</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i2.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Jeans</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i3.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Rolex</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i4.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Tennis</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i5.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Reloj</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i6.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Zapatillas Puma</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i7.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Bolso</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="single-product">
+            <div class="product-img">
+              <img class="img-fluid w-100" src="{% static 'img/product/inspired-product/i8.jpg' %}" alt="" />
+              <div class="p_icon">
+                <a href="#">
+                  <i class="ti-eye"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="ti-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-btm">
+              <a href="#" class="d-block">
+                <h4>Tennis deportivos</h4>
+              </a>
+              <div class="mt-3">
+                <span class="mr-4">$25.00</span>
+                <del>$35.00</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ End Inspired Product Area =================-->
+
+  <!--================ Start Blog Area =================-->
+  <section class="blog-area section-gap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Úiltimas Noticias</span></h2>
+            <p>Acerca de la moda al rededor del mundo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="single-blog">
+            <div class="thumb">
+              <img class="img-fluid" src="{% static 'img/b1.jpg' %}" alt="">
+            </div>
+            <div class="short_details">
+              <div class="meta-top d-flex">
+                <a href="#">By Admin</a>
+                <a href="#"><i class="ti-comments-smiley"></i>2 Comments</a>
+              </div>
+              <a class="d-block" href="single-blog.html">
+                <h4>Nuevos modelos de relojes saldrán a la venta</h4>
+              </a>
+              <div class="text-wrap">
+                <p>
+                  Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light
+                  Forth.
+                </p>
+              </div>
+              <a href="#" class="blog_btn">Learn More <span class="ml-2 ti-arrow-right"></span></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="single-blog">
+            <div class="thumb">
+              <img class="img-fluid" src="{% static 'img/b2.jpg' %}" alt="">
+            </div>
+            <div class="short_details">
+              <div class="meta-top d-flex">
+                <a href="#">By Admin</a>
+                <a href="#"><i class="ti-comments-smiley"></i>2 Comments</a>
+              </div>
+              <a class="d-block" href="single-blog.html">
+                <h4>Los Jeans se adaptaran a tus medidas sin ningún problema</h4>
+              </a>
+              <div class="text-wrap">
+                <p>
+                  Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light
+                  Forth.
+                </p>
+              </div>
+              <a href="#" class="blog_btn">Learn More <span class="ml-2 ti-arrow-right"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="single-blog">
+            <div class="thumb">
+              <img class="img-fluid" src="{% static 'img/b3.jpg' %}" alt="">
+            </div>
+            <div class="short_details">
+              <div class="meta-top d-flex">
+                <a href="#">By Admin</a>
+                <a href="#"><i class="ti-comments-smiley"></i>2 Comments</a>
+              </div>
+              <a class="d-block" href="single-blog.html">
+                <h4>Nuevos Rolex para mujeres saldrán a la venta desde diciembre</h4>
+              </a>
+              <div class="text-wrap">
+                <p>
+                  Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light
+                  Forth.
+                </p>
+              </div>
+              <a href="#" class="blog_btn">Learn More <span class="ml-2 ti-arrow-right"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ {% endblock%}

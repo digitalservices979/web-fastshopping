@@ -1,0 +1,101 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}
+    Contacto
+{% endblock title %}
+{% block content %}
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+          <div
+            class="banner_content d-md-flex justify-content-between align-items-center"
+          >
+            <div class="mb-3 mb-md-0">
+              <h2>Contáctanos</h2>
+            </div>
+            <div class="page_link">
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!-- ================ contact section start ================= -->
+  <section class="section_gap">
+    <div class="container">
+      <div class="d-sm-block mb-5 pb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2319.733538906834!2d-77.06730153744688!3d-12.090832770185902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9a88e3175f5%3A0x84397196c8b1395f!2sSupermercado%20Candy!5e0!3m2!1ses-419!2spe!4v1568082413961!5m2!1ses-419!2spe" frameborder="0" allowfullscreen="" class="w-100" style="height: 400px;"></iframe>
+        
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <h2 class="contact-title">Dudas o sugerencias</h2>
+        </div>
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <form class="form-contact contact_form" action="mensajes" method="post" id="contactForm">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                    <textarea class="form-control w-100" name="mensaje" id="message" cols="30" rows="9" placeholder="Mensaje" required></textarea>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control" name="nombre" id="name" type="text" placeholder="Nombre" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control" name="correo" id="email" type="email" placeholder="Correo de contacto" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input class="form-control" name="asunto" id="subject" type="text" placeholder="Asunto" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-lg-3">
+              <button type="submit" class="main_btn">Enviar Mensaje</button>
+            </div>
+          </form>
+
+
+        </div>
+
+        <div class="col-lg-4">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+              <h3>San Isidro, Lima.</h3>
+              <p>+51 979553424</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <div class="media-body">
+              <h3><a href="tel:454545654">+51 979553424</a></h3>
+              <p>Ing. Johan</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3><a href="mailto:support@colorlib.com">digitalservices9797@gmail.com</a></h3>
+              <p>Envía tus mensajes en cualquier momento!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	<!-- ================ contact section end ================= -->
+
+{% endblock content %}

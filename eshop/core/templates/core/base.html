@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>FastShopping | {% block title%}{% endblock %}
+        </title>
+        <meta name="description" content="Venta de ropa" />
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" href="{% static 'img/icon.jpg' %}" type="image/jpg" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendors/jquery-ui/jquery-ui.css' %}" />
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+        {% block extra_css %}
+            
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        <header class="header_area">
+            <div class="main_menu">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <a class="navbar-brand logo_h" href="{% url 'home' %}">
+                    <h1>Fast Shopping</h1>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+                    <div class="row w-100 mr-0">
+                      <div class="col-lg-12 pr-0">
+                        <ul class="nav navbar-nav center_nav pull-right">
+                          <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                          </li>
+                          <li class="nav-item{% if request.path == '/productos/lista-de-ropa/' %} active{% endif %}">
+                            <a class="nav-link" href="{% url 'product_list'%}">Productos</a>
+                          </li>
+                          <li class="nav-item{% if request.path == '/productos/productos/' %} active{% endif %}">
+                            <a class="nav-link" href="{% url 'product_cart' %}">Carrito</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                          </li>                                            
+                          <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact' %}">Contáctanos</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header>
+
+        {% block content %}{% endblock %}
+
+        <footer class="footer-area section_gap" style="width: 100%;">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 col-md-3 single-footer-widget">
+                  <h4>Productos Top</h4>
+                  <ul>
+                    <li>Managed Website</li>
+                    <li>Manage Reputation</li>
+                    <li>Power Tools</li>
+                    <li>Marketing Service</li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3 single-footer-widget">
+                  <h4>Recursos</h4>
+                  <ul>
+                    <li>Guides</li>
+                    <li>Research</li>
+                    <li>Experts</li>
+                    <li>Agencies</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-6 single-footer-widget">
+                  <h4>Forma parte de nosotros</h4>
+                  <p>Entérate de las últimas ofertas</p>
+                  <div class="form-wrap" id="mc_embed_signup">
+                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                      method="get" class="form-inline">
+                      <input class="form-control" name="EMAIL" placeholder="Escribe tu e-mail" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'Your Email Address '" required="" type="email">
+                      <button class="click-btn btn btn-default">Subscribir</button>
+                      <div style="position: absolute; left: -5000px;">
+                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                      </div>
+
+                      <div class="info"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                <div class="col-lg-4 col-md-12 footer-social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+          <script src="{% static 'js/popper.js' %}"></script>
+          <script src="{% static 'js/bootstrap.min.js' %}"></script>
+          <script src="{% static 'js/stellar.js' %}"></script>
+          <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+          <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+          <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+          <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+          <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+          <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+          <script src="{% static 'vendors/jquery-ui/jquery-ui.js' %}"></script>
+          <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+          <script src="{% static 'vendors/counter-up/jquery.counterup.js' %}"></script>
+          <script src="{% static 'js/mail-script.js' %}"></script>
+          <script src="{% static 'js/theme.js' %}"></script>
+        {% block extra_js %}
+            
+        {% endblock %}
+    </body>
+</html>
