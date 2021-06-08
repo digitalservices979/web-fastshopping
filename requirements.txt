@@ -1,4 +1,4 @@
-Pillow==6.2.0
+Pillow==8.2.0
 django==2.2.8
 django-ckeditor==5.7.1
 django-carton==1.2.1
